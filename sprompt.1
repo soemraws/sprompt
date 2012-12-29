@@ -1,0 +1,64 @@
+.TH SPROMPT 1 "DECEMBER 2012" Linux ""
+.SH NAME
+sprompt \- Prompt the user for a value
+.SH SYNOPSIS
+.B sprompt
+.RB [ -a
+.IR char ]
+.RB [ -b
+.IR chars ]
+.RB [ -q
+.IR chars ]
+.RB [ -i ]
+.RB [ -f ]
+.RI [ string ]
+.SH DESCRIPTION
+.B sprompt
+is a simple program that prompts the user for input, after reading
+a list of newline-separated items from stdin. The user can enter
+input using
+.I readline
+editing, and tab complete items in the list. The selected value is
+written to standard output. Optionally,
+.I string
+will be used to prompt the user for input. This program is useful
+in shell scripts as a console user interface alternative to the
+shell's built-in
+.IR read .
+.SH OPTIONS
+.TP
+.BI -a\  char
+The character
+.I char
+is automatically appended after tab completion. This is typically
+a character that is in the list of characters that break words (see
+.BR -b ).
+By default this is a space.
+.TP
+.BI -b\  chars
+The characters in
+.I chars
+will be assumed to break words for completion. The default value
+of
+.I readline
+is used.
+.TP
+.BI -q\  chars
+The characters in
+.I chars
+will be assumed to be quote characters.
+.TP
+.B -i
+Set tab completion to do case-insensitive matches.
+.TP
+.B -f
+Use filename completion instead.
+.B sprompt
+will not read a list of completion items from standard input. Moreover,
+the other options,
+.BR -a , -b , -q \ and\  -i
+should not be used.
+.SH AUTHOR
+Sumant S. R. Oemrawsingh
+.SH SEE ALSO
+.IR readline (3),\  read ()
