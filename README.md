@@ -6,7 +6,7 @@ sprompt - Prompt the user for a value with readline support
 SYNOPSIS
 --------
 
-**sprompt** [**-a** *char*] [**-b** *chars*] [**-q** *chars*] [**-i**] [**-f**] [*string*]
+**sprompt** \[**-a** *char*\] \[**-b** *chars*\] \[**-q** *chars*\] \[**-i**\] \[**-f**\] \[*string*\]
 
 DESCRIPTION
 -----------
