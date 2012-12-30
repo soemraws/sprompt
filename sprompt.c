@@ -17,7 +17,7 @@ struct completion_store
 
 typedef struct completion_store completion_store;
 
-static completion_store completions;
+static completion_store completions = { NULL, 0, 0};
 
 /* By default, use case-sensitive string comparison */
 static int (*prompt_strncmp)(const char *, const char *, size_t) = strncmp;
@@ -98,9 +98,9 @@ main(int argc, char** argv)
 	int use_stdin = 1;
 	char *line, *prompt;
 	FILE* tty = fopen("/dev/tty", "r+");
+
 	rl_instream = tty;
 	rl_outstream = tty;
-
 
 	for(i = 1; i < argc; i++)
 	{
