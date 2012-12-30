@@ -1,7 +1,7 @@
 NAME
 ----
 
-sprompt - Prompt the user for input, with tab completion
+sprompt \- Prompt the user for input, with tab completion
 
 SYNOPSIS
 --------
@@ -23,24 +23,24 @@ OPTIONS
 -------
 
 **-a** *char*
-The character *char* is automatically appended after tab completion. This
-is typically a character that is in the list of characters that break words
-(see **-b**). By default this is a space.
+> The character *char* is automatically appended after tab completion. This
+> is typically a character that is in the list of characters that break words
+> (see **-b**). By default this is a space.
 
 **-b** *chars*
-The characters in *chars* will be assumed to break words for completion. The
-default value of *readline* is used.
+> The characters in *chars* will be assumed to break words for completion. The
+> default value of *readline* is used.
 
 **-q** *chars*
-The characters in *chars* will be assumed to be quote characters.
+> The characters in *chars* will be assumed to be quote characters.
 
 **-i**
-Set tab completion to do case-insensitive matches.
+> Set tab completion to do case-insensitive matches.
 
 **-f**
-Use filename completion instead. **sprompt** will not read a list of
-completion items from standard input. Moreover, the other options,
-**-a**, **-b**, **-q** and **-i** should not be used.
+> Use filename completion instead. **sprompt** will not read a list of
+> completion items from standard input. Moreover, the other options,
+> **-a**, **-b**, **-q** and **-i** should not be used.
 
 AUTHOR
 ------
