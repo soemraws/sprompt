@@ -1,15 +1,11 @@
-CC?=gcc
-CFLAGS?=-D_BSD_SOURCE -D_POSIX_C_SOURCE=2 -Wall -g -std=c99
-DESTDIR?=
-PREFIX?=${DESTDIR}/usr/local
-MANPREFIX?=${PREFIX}/share/man
+include config.mk
 
 .PHONY : all clean install uninstall
 
 all : sprompt
 
 sprompt : sprompt.c
-	${CC} -o sprompt sprompt.c -lreadline ${CFLAGS}
+	${CC} -o $@ $< -lreadline ${CFLAGS}
 
 install : sprompt
 	cp sprompt ${PREFIX}/bin/
