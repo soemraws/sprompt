@@ -1,7 +1,7 @@
 NAME
 ----
 
-sprompt - Prompt the user for a value with readline support
+sprompt - Prompt the user for input, with tab completion
 
 SYNOPSIS
 --------
